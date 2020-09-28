@@ -1,0 +1,8 @@
+source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/themes/onedark.vim
+source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/general/airline.vim
+source $HOME/.config/nvim/general/vue.vim
+source $HOME/.config/nvim/general/ctrlp.vim
+source $HOME/.config/nvim/general/phpInsertUse.vim
+source $HOME/.config/nvim/general/nerdtree.vim

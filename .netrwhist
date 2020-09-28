@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/marctroesken/.config/nvim/vim-plug'
+let g:netrw_dirhist_3='/Users/marctroesken/Code/babydish'
+let g:netrw_dirhist_2='/Users/marctroesken/.config/nvim/vim-plug'
+let g:netrw_dirhist_1='/Users/marctroesken/Code/babydish/app/Http'
+let g:netrw_dirhist_0='/Users/marctroesken/Code/babydish/app'
+let g:netrw_dirhist_9='/Users/marctroesken/Code/babydish'
+let g:netrw_dirhist_8='/Users/marctroesken/Code/babydish/routes'
+let g:netrw_dirhist_7='/Users/marctroesken/Code/babydish'
+let g:netrw_dirhist_6='/Users/marctroesken/Code/babydish/routes'
+let g:netrw_dirhist_5='/Users/marctroesken/Code/babydish'
