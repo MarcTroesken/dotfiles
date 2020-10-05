@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'joshdick/onedark.vim'
+    Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
