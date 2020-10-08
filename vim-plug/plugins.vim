@@ -2,8 +2,6 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -16,7 +14,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'joshdick/onedark.vim'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'posva/vim-vue'
     Plug 'mattn/emmet-vim'
@@ -26,7 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'noahfrederick/vim-laravel'
     Plug 'mg979/vim-visual-multi'
-    Plug 'arnaud-lb/vim-php-namespace'
     Plug 'airblade/vim-gitgutter'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()

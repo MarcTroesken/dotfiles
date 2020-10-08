@@ -2,6 +2,7 @@
 let g:mapleader = ','
 
 syntax enable                           " Enables syntax highlighing
+set backspace=indent,eol,start          " Make backspace behave like every other editor.
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -28,6 +29,7 @@ set background=dark                     " tell vim what the background color loo
 set showtabline=2                       " Always show tabs
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
+set shortmess+=c                        " Don't pass messages to ins-completion-menu.
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
@@ -38,6 +40,7 @@ if !exists('g:vscode')
   set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 endif
 
+hi vertsplit guifg=bg guibg=bg
 autocmd BufWritePre * %s/\s\+$//e
 nmap vs :vsplit<cr>
 imap jj <esc>
