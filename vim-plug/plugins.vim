@@ -14,7 +14,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'posva/vim-vue'
     Plug 'mattn/emmet-vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -25,5 +24,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mg979/vim-visual-multi'
     Plug 'airblade/vim-gitgutter'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mhinz/vim-startify'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
 call plug#end()
