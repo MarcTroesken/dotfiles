@@ -14,7 +14,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'posva/vim-vue'
     Plug 'mattn/emmet-vim'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'StanAngeloff/php.vim'
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'pangloss/vim-javascript'
