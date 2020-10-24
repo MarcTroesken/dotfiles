@@ -1,5 +1,5 @@
 "set leader key
-let g:mapleader = ','
+let g:mapleader = ' '
 
 syntax enable                           " Enables syntax highlighing
 set backspace=indent,eol,start          " Make backspace behave like every other editor.
