@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'StanAngeloff/php.vim'
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'pangloss/vim-javascript'
-    Plug 'mxw/vim-jsx'
+   " Plug 'mxw/vim-jsx'
     Plug 'airblade/vim-gitgutter'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'mhinz/vim-startify'
