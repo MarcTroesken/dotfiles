@@ -30,7 +30,9 @@ call plug#end()
 let g:mapleader = ' '
 
 syntax enable                           " Enables syntax highlighing
+set termguicolors
 colorscheme nord
+highlight Comment cterm=italic gui=italic
 
 set backspace=indent,eol,start          " Make backspace behave like every other editor.
 set hidden                              " Required to keep multiple buffers open multiple buffers
