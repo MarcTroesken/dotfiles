@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'joshdick/onedark.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
     Plug 'posva/vim-vue'
@@ -31,7 +32,7 @@ let g:mapleader = ' '
 
 syntax enable                           " Enables syntax highlighing
 set termguicolors
-colorscheme nord
+colorscheme onedark
 highlight Comment cterm=italic gui=italic
 
 set backspace=indent,eol,start          " Make backspace behave like every other editor.
@@ -97,7 +98,7 @@ augroup END
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
-let g:airline_theme = 'nord'
+let g:airline_theme = 'onedark'
 
 " FZF
 " This is the default extra key bindings
