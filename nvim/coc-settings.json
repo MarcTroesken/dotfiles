@@ -1,4 +1,5 @@
 {
   "tsserver.npm": "/usr/local/bin/npm",
-  "tailwindCSS.emmetCompletions": true
+  "tailwindCSS.emmetCompletions": true,
+  "coc.preferences.formatOnSaveFiletypes": ["javascript"]
 }
