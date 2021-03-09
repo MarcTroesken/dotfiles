@@ -15,16 +15,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-commentary'
     Plug 'vim-airline/vim-airline'
-    Plug 'posva/vim-vue'
-    Plug 'mattn/emmet-vim'
-    Plug 'StanAngeloff/php.vim'
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'pangloss/vim-javascript'
     Plug 'airblade/vim-gitgutter'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'mhinz/vim-startify'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -91,32 +89,15 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 nmap <C-b> :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0
 
-" Vue Plug
-augroup vue
-  autocmd!
-  autocmd BufEnter *.vue syntax sync fromstart " Fix issue with syntax highlight disappearing randomly
-augroup END
-
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 let g:airline_theme = 'gruvbox'
 
-" FZF
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
-let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
-
-let $FZF_DEFAULT_COMMAND = 'rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
-command! -bang -nargs=? -complete=dir Files
-\ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-nmap <silent> <C-P> :Files<CR>
+" Find files using Telescope command-line sugar.
+nnoremap <silent> <C-P> <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
 " AutoComment
 autocmd FileType php setlocal commentstring=//\ %s
