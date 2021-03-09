@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'morhetz/gruvbox'
     Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-commentary'
     Plug 'vim-airline/vim-airline'
     Plug 'posva/vim-vue'
     Plug 'mattn/emmet-vim'
@@ -116,5 +117,8 @@ command! -bang -nargs=? -complete=dir Files
 \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 nmap <silent> <C-P> :Files<CR>
+
+" AutoComment
+autocmd FileType php setlocal commentstring=//\ %s
 
 source $HOME/.config/nvim/coc.vim
