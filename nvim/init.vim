@@ -7,7 +7,6 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'sheerun/vim-polyglot'
-    Plug 'scrooloose/NERDTree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'arcticicestudio/nord-vim'
     Plug 'joshdick/onedark.vim'
@@ -85,9 +84,9 @@ nmap <C-l> <C-w>l
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
-" NERDTree
-nmap <C-b> :NERDTreeToggle<cr>
-let NERDTreeHijackNetrw = 0
+" coc-explorer
+nmap <C-b> :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " Airline
 let g:airline_powerline_fonts = 1
